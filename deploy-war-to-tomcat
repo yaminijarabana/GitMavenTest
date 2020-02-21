@@ -8,12 +8,12 @@ node {
      sh "${mvnHome}/bin/mvn package"
        }
    stage('Deploy to Tomcat'){    
-  sshagent(['tomcat']) {
+  sshagent(['tomcat']){
      sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@54.211.81.105:/opt/apache-tomcat-9.0.31/webapps/'
-      } }
-    stage('Email Notification'){
+      }
+     }
+   stage('Email Notification'){
   mail bcc: '', body: '''Hi WELCOME TO JENKINS EMAIL ALERT
 Thanks yamini''', cc: '', from: '', replyTo: '', subject: 'Jenkins Job', to: 'rudrapdas82@gmail.com,jarabanayamini@gmail.com'
   }  
-  
 }
