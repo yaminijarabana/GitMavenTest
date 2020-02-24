@@ -7,11 +7,4 @@ node {
      def mvnHome = tool name: 'Maven 3.6.1', type: 'maven'
      sh "${mvnHome}/bin/mvn package"
        }
-  stage('Email Notification'){
-  mail bcc: '', body: '''Hi ,
-WELCOME TO JENKINS EMAIL ALERT
-
-Thanks Yamini''', cc: '', from: '', replyTo: '', subject: 'Jenkins pipeline', to: 'yaminijarabana0402@gmail.com'
-  }  
-  
-}
+ }
