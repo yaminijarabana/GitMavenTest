@@ -11,7 +11,7 @@ node {
   mail bcc: '', body: '''Hi ,
 WELCOME TO JENKINS EMAIL ALERT
 
-Thanks Yamini''', cc: '', from: '', replyTo: '', subject: 'Jenkins pipeline', to: 'jarabanayamini@gmail.com'
+Thanks Yamini''', cc: '', from: '', replyTo: '', subject: 'Jenkins pipeline', to: 'yaminijarabana0402@gmail.com'
   }  
   
 }
