@@ -4,7 +4,7 @@ node {
         }
    stage('Compile Project'){
      //Get MAVEN HOME PATH
-     def mvnHome = tool name: 'Maven', type: 'maven'
+     def mvnHome = tool name: 'Maven 3.6.1', type: 'maven'
      sh "${mvnHome}/bin/mvn package"
        }
   stage('Email Notification'){
