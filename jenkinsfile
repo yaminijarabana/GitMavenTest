@@ -14,6 +14,13 @@ stage('Email Notification'){
 WELCOME TO JENKINS EMAIL ALERT
 
 Thanks Yamini''', cc: '', from: '', replyTo: '', subject: 'Jenkins pipeline', to: 'yaminijarabana0402@gmail.com'
+  } 
+  stage('Email Notification'){
+  mail bcc: '', body: '''Hi,
+  Your jenikins pipeline is running.your done very good job.
+
+Thanks Yamini''', cc: '', from: '', replyTo: '', subject: 'jenkins Pipeline ', to: 'yamini.jarabana@testingxperts.com'
   }  
+
 
 }
