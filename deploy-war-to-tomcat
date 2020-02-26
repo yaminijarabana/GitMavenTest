@@ -9,7 +9,7 @@ node {
        }
    stage('Deploy to Tomcat'){    
    sshagent(['tomcat']){
-      sh 'ssh -o StrictHostKeyChecking=no target/*.war ec2-user@3.92.209.146:/opt/apache-tomcat-8.5.51/webapps'
+      sh 'ssh -o StrictHostKeyChecking=no target/*.war ec2-user@3.92.209.146:/opt/apache-tomcat-8.5.51/webapps/'
      //sh 'scp StrictHostKeyChecking=no /var/lib/jenkins/workspace/jenkins_git_maven/target/*.war ec2-user@34.227.149.156:/opt/apache-tomcat-8.5.41/webapps/'
       }
      }
