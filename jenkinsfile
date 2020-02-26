@@ -9,13 +9,6 @@ def mvnHome = tool name: 'maven-3', type: 'maven'
 sh "${mvnHome}/bin/mvn package"
 }
 
-stage('Deploy to Tomcat'){    
-  sshagent(['69c783e5-6979-49c6-a64f-e1ef8c8ea2cc']){
-     sh 'scp StrictHostKeyChecking=no target/*.war ec2-user@34.227.149.156:/opt/apache-tomcat-8.5.51/webapps'
-     sh 'scp StrictHostKeyChecking=no /var/lib/jenkins/workspace/jenkins_git_maven/target/*.war ec2-user@34.227.149.156:/opt/apache-tomcat-8.5.41/webapps/'
-      }
-      }
-
   stage('Email Notification'){
   mail bcc: '', body: '''Hi,
   Your jenikins pipeline is running.your done very good job.
