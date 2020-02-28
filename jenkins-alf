@@ -11,7 +11,7 @@ node {
     stage('Email Notification'){
     
     mail bcc: '', body: '''Hi,
-Build Deployed Successfully ''', cc: '', from: '', replyTo: '', subject: 'Jenkins Success build mail', to: ''
+Build Deployed Successfully ''', cc: '', from: '', replyTo: '', subject: 'Jenkins Success build mail', to: 'yamini.jarabana@testingxperts.com'
     
     }
     stage('Deployment to tomcat')
