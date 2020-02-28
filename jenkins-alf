@@ -19,7 +19,8 @@ Build Deployed Successfully ''', cc: '', from: '', replyTo: '', subject: 'Jenkin
     sshagent(['Tomcat_P']) {
     sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/jenkins_git_maven/target/my-app-1.0-SNAPSHOT.jar.war ec2-user@3.92.209.146:/opt/apache-tomcat-8.5.51/webapps/'
 }
-   }  
+   }
+   
 }
        
        
